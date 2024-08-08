@@ -54,5 +54,5 @@ document.getElementById('logoutButton').addEventListener('click', () => {
     };
 
     // Redireccionar al usuario a la página de inicio de sesión
-    window.location.href = '../index.html';
+    window.location.href = 'index.html';
 });
