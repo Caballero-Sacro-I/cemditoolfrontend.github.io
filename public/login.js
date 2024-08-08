@@ -15,7 +15,7 @@ document.getElementById('loginForm').addEventListener('submit', async (event) =>
     const data = await response.json();
 
     if (response.status === 200) {
-        window.location.href = 'report.html'; // Redirige a la página inicial si el login es exitoso
+        window.location.href = './public/report.html'; // Redirige a la página inicial si el login es exitoso
     } else {
         alert(data.message); // Muestra una alerta si las credenciales son incorrectas
         document.getElementById('message').innerText = data.message;
