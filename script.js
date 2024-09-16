@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("DOM completamente cargado y parseado.");
 
     // URL de embed de Power BI
-    const embedUrl = "https://app.powerbi.com/view?r=eyJrIjoiNDY4N2VhNjktZTYxOS00Njc1LTkzNjUtMjg3N2VkY2FmZGIzIiwidCI6IjUzOWIzYWNkLTE1MDQtNGUzNC1iODVjLTAyNGFlMTc4OTQxZCIsImMiOjR9";
+    const embedUrl = "https://app.powerbi.com/view?r=eyJrIjoiNzI1ZGIzZWMtYjQ1Zi00ZmQ3LWE0MGQtNzQ1NzdhODFiYWUzIiwidCI6IjUzOWIzYWNkLTE1MDQtNGUzNC1iODVjLTAyNGFlMTc4OTQxZCIsImMiOjR9";
+
 
     const models = window['powerbi-client'].models;
     const config = {
