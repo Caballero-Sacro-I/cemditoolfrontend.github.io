@@ -28,7 +28,6 @@ document
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ username, password }),
     });
 
     const responseJson = await resData.json();
