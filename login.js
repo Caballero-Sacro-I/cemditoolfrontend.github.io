@@ -4,7 +4,7 @@ document
   .addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    alert("hola");
+    // alert("hola");
 
     console.log("holaaaa 😁");
 
@@ -44,18 +44,20 @@ document
 
     const data = await response.json();
 
-    if (response.status === 200) {
-      // Almacenar el token en localStorage o sessionStorage
-      localStorage.setItem("token", data.token);
-      alert(data.token);
+    console.log("dataaaaa", data);
 
-      window.location.href = "report.html"; // Redirige a la página del reporte si el login es exitoso
-    } else if (response.status !== 200) {
-      window.location.href = "index.html"; // Redirige a la página de inicio de sesión si las credenciales son incorrectas
+    // if (response.status === 200) {
+    //   // Almacenar el token en localStorage o sessionStorage
+    //   localStorage.setItem("token", data.token);
+    //   alert(data.token);
 
-      alert(data.message); // Muestra una alerta si las credenciales son incorrectas
-      document.getElementById("message").innerText = data.message;
-    }
+    //   window.location.href = "report.html"; // Redirige a la página del reporte si el login es exitoso
+    // } else if (response.status !== 200) {
+    //   window.location.href = "index.html"; // Redirige a la página de inicio de sesión si las credenciales son incorrectas
+
+    //   alert(data.message); // Muestra una alerta si las credenciales son incorrectas
+    //   document.getElementById("message").innerText = data.message;
+    // }
   });
 
 document
