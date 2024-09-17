@@ -23,20 +23,19 @@ document
     //   body: JSON.stringify({ username, password }),
     // });
 
-    // const resData = await fetch("https://caballero-sacro-i.github.io/cemditoolfrontend.github.io/solicitudPrueba", {
-    //   //https://cemditools-backend-cold-lake-6201.fly.dev/
-    //   method: "GET",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({ username, password }),
-    // });
+    const resData = await fetch("https://caballero-sacro-i.github.io/cemditoolfrontend.github.io/solicitudPrueba", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    });
 
-    // const responseJson = await resData.json();
-    // console.log(
-    //   "responseJson responseJsonresponseJsonresponseJson",
-    //   responseJson
-    // );
+    const responseJson = await resData.json();
+    console.log(
+      "responseJson 😭😭😭😭😭",
+      responseJson
+    );
 
     // 
 
