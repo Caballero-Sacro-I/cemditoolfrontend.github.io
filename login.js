@@ -23,7 +23,7 @@ document
     //   body: JSON.stringify({ username, password }),
     // });
 
-    const resData = await fetch("https://cemditools-backend-cold-lake-6201.fly.dev//solicitudPrueba", {
+    const resData = await fetch("https://cemditools-backend-cold-lake-6201.fly.dev/solicitudPrueba", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
