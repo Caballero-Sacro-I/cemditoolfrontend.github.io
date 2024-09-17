@@ -4,52 +4,54 @@ document
   .addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const token = localStorage.getItem("token");
+    alert("hola");
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+    // const token = localStorage.getItem("token");
 
-    const response = await fetch("http://localhost:3000/api/login", {
-      //https://cemditools-backend-cold-lake-6201.fly.dev/
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        //'Authorization': `Bearer ${token}`,
-      },
-      body: JSON.stringify({ username, password }),
-    });
+    // const username = document.getElementById("username").value;
+    // const password = document.getElementById("password").value;
 
-    const resData = await fetch("https://caballero-sacro-i.github.io/cemditoolfrontend.github.io/solicitudPrueba", {
-      //https://cemditools-backend-cold-lake-6201.fly.dev/
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ username, password }),
-    });
+    // const response = await fetch("http://localhost:3000/api/login", {
+    //   //https://cemditools-backend-cold-lake-6201.fly.dev/
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     //'Authorization': `Bearer ${token}`,
+    //   },
+    //   body: JSON.stringify({ username, password }),
+    // });
 
-    const responseJson = await resData.json();
-    console.log(
-      "responseJson responseJsonresponseJsonresponseJson",
-      responseJson
-    );
+    // const resData = await fetch("https://caballero-sacro-i.github.io/cemditoolfrontend.github.io/solicitudPrueba", {
+    //   //https://cemditools-backend-cold-lake-6201.fly.dev/
+    //   method: "GET",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({ username, password }),
+    // });
 
-    console.log("holaaaa 😁")
+    // const responseJson = await resData.json();
+    // console.log(
+    //   "responseJson responseJsonresponseJsonresponseJson",
+    //   responseJson
+    // );
 
-    const data = await response.json();
+    // console.log("holaaaa 😁")
 
-    if (response.status === 200) {
-      // Almacenar el token en localStorage o sessionStorage
-      localStorage.setItem("token", data.token);
-      alert(data.token);
+    // const data = await response.json();
 
-      window.location.href = "report.html"; // Redirige a la página del reporte si el login es exitoso
-    } else if (response.status !== 200) {
-      window.location.href = "index.html"; // Redirige a la página de inicio de sesión si las credenciales son incorrectas
+    // if (response.status === 200) {
+    //   // Almacenar el token en localStorage o sessionStorage
+    //   localStorage.setItem("token", data.token);
+    //   alert(data.token);
 
-      alert(data.message); // Muestra una alerta si las credenciales son incorrectas
-      document.getElementById("message").innerText = data.message;
-    }
+    //   window.location.href = "report.html"; // Redirige a la página del reporte si el login es exitoso
+    // } else if (response.status !== 200) {
+    //   window.location.href = "index.html"; // Redirige a la página de inicio de sesión si las credenciales son incorrectas
+
+    //   alert(data.message); // Muestra una alerta si las credenciales son incorrectas
+    //   document.getElementById("message").innerText = data.message;
+    // }
   });
 
 document
