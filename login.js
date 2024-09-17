@@ -6,52 +6,56 @@ document
 
     alert("hola");
 
-    console.log("holaaaa 😁")
+    console.log("holaaaa 😁");
 
     // const token = localStorage.getItem("token");
 
-    // const username = document.getElementById("username").value;
-    // const password = document.getElementById("password").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
     // const response = await fetch("http://localhost:3000/api/login", {
-    //   //https://cemditools-backend-cold-lake-6201.fly.dev/
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     //'Authorization': `Bearer ${token}`,
-    //   },
-    //   body: JSON.stringify({ username, password }),
-    // });
-
-    const resData = await fetch("https://cemditools-backend-cold-lake-6201.fly.dev/solicitudPrueba", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    const responseJson = await resData.json();
-    console.log(
-      "responseJson 😭😭😭😭😭",
-      responseJson
+    //https://cemditools-backend-cold-lake-6201.fly.dev/
+    const response = await fetch(
+      "https://cemditools-backend-cold-lake-6201.fly.dev/api/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          //'Authorization': `Bearer ${token}`,
+        },
+        body: JSON.stringify({ username, password }),
+      }
     );
 
-    // 
+    // const resData = await fetch(
+    //   "https://cemditools-backend-cold-lake-6201.fly.dev/solicitudPrueba",
+    //   {
+    //     method: "GET",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //   }
+    // );
 
-    // const data = await response.json();
+    // const responseJson = await resData.json();
+    // console.log("responseJson 😭😭😭😭😭", responseJson);
 
-    // if (response.status === 200) {
-    //   // Almacenar el token en localStorage o sessionStorage
-    //   localStorage.setItem("token", data.token);
-    //   alert(data.token);
+    //
 
-    //   window.location.href = "report.html"; // Redirige a la página del reporte si el login es exitoso
-    // } else if (response.status !== 200) {
-    //   window.location.href = "index.html"; // Redirige a la página de inicio de sesión si las credenciales son incorrectas
+    const data = await response.json();
 
-    //   alert(data.message); // Muestra una alerta si las credenciales son incorrectas
-    //   document.getElementById("message").innerText = data.message;
-    // }
+    if (response.status === 200) {
+      // Almacenar el token en localStorage o sessionStorage
+      localStorage.setItem("token", data.token);
+      alert(data.token);
+
+      window.location.href = "report.html"; // Redirige a la página del reporte si el login es exitoso
+    } else if (response.status !== 200) {
+      window.location.href = "index.html"; // Redirige a la página de inicio de sesión si las credenciales son incorrectas
+
+      alert(data.message); // Muestra una alerta si las credenciales son incorrectas
+      document.getElementById("message").innerText = data.message;
+    }
   });
 
 document
