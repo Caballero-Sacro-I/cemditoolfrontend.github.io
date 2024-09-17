@@ -6,6 +6,8 @@ document
 
     alert("hola");
 
+    console.log("holaaaa 😁")
+
     // const token = localStorage.getItem("token");
 
     // const username = document.getElementById("username").value;
@@ -36,7 +38,7 @@ document
     //   responseJson
     // );
 
-    // console.log("holaaaa 😁")
+    // 
 
     // const data = await response.json();
 
